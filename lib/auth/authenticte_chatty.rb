@@ -15,17 +15,6 @@ module Auth
             end
         end
 
-        # def
-        #     if user == @@user && password == @@password
-        #         return "succesful"
-
-        #     # if user != @@user
-        #     #     return "not authenticated!, because your user is wrong :)"
-        #     # if password != @@password
-        #     #     return "not authenticated!, because your password is wrong :)"
-
-        # end
-
         private
         @@user="horst"
         @@password = "hansen"
