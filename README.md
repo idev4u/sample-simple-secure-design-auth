@@ -4,6 +4,37 @@
 
 This repo aim for an very simple example for a insecure design.
 
+## Demo
+
+```sh
+bundle exec rspec spec/auth_spec.rb 
+```
+
+```console
+Auth::Authenticate
+  Secure Design
+    with the right creds authentication will be successfully
+    it won't if the creds are wrong
+
+Finished in 0.00165 seconds (files took 0.09646 seconds to load)
+2 examples, 0 failures
+```
+
+```sh
+bundle exec rspec spec/auth_chatty_spec.rb 
+```
+
+```console
+Auth::Authenticate_Chatty
+  Insecure Design
+    with the right creds authentication will be successfully
+    it won't if the creds are wrong
+      tell the user that the username is wrong
+      tell the user that the password is wrong
+
+Finished in 0.00201 seconds (files took 0.09598 seconds to load)
+3 examples, 0 failures
+```
 
 ## Gem
 
