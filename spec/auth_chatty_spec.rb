@@ -5,7 +5,7 @@ RSpec.describe Auth::Authenticate_Chatty do
   password = "hansen"
 
   context "Insecure Design"  do
-    it "with the right creds will be successfully" do
+    it "with the right creds authentication will be successfully" do
       expect(Auth::Authenticate_Chatty.login(user,password)).to eql("succesful")
     end
 

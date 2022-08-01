@@ -5,7 +5,7 @@ RSpec.describe Auth::Authenticate do
   password = "hansen"
 
   context "Secure Design" do
-    it "with the right creds will be successfully" do
+    it "with the right creds authentication will be successfully" do
       expect(Auth::Authenticate.login(user,password)).to eql("succesful")
     end
 
