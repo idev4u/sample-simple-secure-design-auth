@@ -10,10 +10,10 @@ RSpec.describe Auth::Authenticate_Chatty do
     end
 
     context "it won't if the creds are wrong" do
-      it "tell the user that the username is wrong" do
+      it "if the user is wrong, tell the user that the username is wrong" do
         expect(Auth::Authenticate_Chatty.login("wrong_user",password)).to eql("not authenticated!, because your user is wrong :)")
       end
-      it "tell the user that the password is wrong" do
+      it "if the password is wrong, tell the user that the password is wrong" do
         expect(Auth::Authenticate_Chatty.login(user,"worng_password")).to eql("not authenticated!, because your password is wrong :)")
       end
     end

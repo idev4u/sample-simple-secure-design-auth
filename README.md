@@ -15,9 +15,11 @@ Auth::Authenticate
   Secure Design
     with the right creds authentication will be successfully
     it won't if the creds are wrong
+      if the user is wrong, give the feedback that the auth wasn't succesful
+      if the password is wrong, give the feedback that the auth wasn't succesful
 
-Finished in 0.00165 seconds (files took 0.09646 seconds to load)
-2 examples, 0 failures
+Finished in 0.00188 seconds (files took 0.09746 seconds to load)
+3 examples, 0 failures
 ```
 
 ```sh
@@ -29,10 +31,10 @@ Auth::Authenticate_Chatty
   Insecure Design
     with the right creds authentication will be successfully
     it won't if the creds are wrong
-      tell the user that the username is wrong
-      tell the user that the password is wrong
+      if the user is wrong, tell the user that the username is wrong
+      if the password is wrong, tell the user that the password is wrong
 
-Finished in 0.00201 seconds (files took 0.09598 seconds to load)
+Finished in 0.00179 seconds (files took 0.09639 seconds to load)
 3 examples, 0 failures
 ```
 

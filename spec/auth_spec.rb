@@ -9,8 +9,13 @@ RSpec.describe Auth::Authenticate do
       expect(Auth::Authenticate.login(user,password)).to eql("succesful")
     end
 
-    it "it won't if the creds are wrong" do
-      expect(Auth::Authenticate.login(user,"password")).to eql("not authenticated!")
+    context "it won't if the creds are wrong" do
+      it "if the user is wrong, give the feedback that the auth wasn't succesful" do
+        expect(Auth::Authenticate.login("user",password)).to eql("not authenticated!")
+      end
+      it "if the password is wrong, give the feedback that the auth wasn't succesful" do
+        expect(Auth::Authenticate.login(user,"password")).to eql("not authenticated!")
+      end
     end
   end
 end
